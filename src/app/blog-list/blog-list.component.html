@@ -1,0 +1,4 @@
+<a href="#" (click)="updateAllSummary()">ExpandAll</a>
+<app-blog-post #blogPost *ngFor="let p of posts[currentPage]" [post]="p"></app-blog-post>
+<!-- <app-blog-post #blogPost [post]="posts[0][0]"></app-blog-post> -->
+<app-pagination [noOfPosts]="posts.length" (pageNumberClick)="updateCurrentPage($event)"></app-pagination>
